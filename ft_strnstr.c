@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:42:37 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 11:14:52 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 13:19:37 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	while (i < len - length)
 	{
-		if (!ft_memcmp((void *) haystack + i, (void *) needle, length))
+		if (!ft_strncmp(haystack + i, needle, length))
 			return ((char *) haystack + i);
 		i++;
 	}

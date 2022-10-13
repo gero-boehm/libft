@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+#include <limits.h>
 
 #include "libft.h"
 
@@ -65,15 +67,21 @@ int main(void)
 	// /* 3 */ printf("%d\n", ft_memmove(s, s + 2, 2) == s && !memcmp(s, sResult, 7)); //forward
 	// /* 4 */ printf("%d\n", ft_memmove(sResult + 1, sResult, 2) == sResult + 1 && !memcmp(sResult, sResult2, 7)); //reverse
 
-	char dest[30]; memset(dest, 0, 30);
-	char * src = (char *)"AAAAAAAAA";
-	dest[0] = 'B';
-	/* 1 */ printf("%d\n", ft_strlcat(dest, src, 0) == strlen(src) && !strcmp(dest, "B"));
-	dest[0] = 'B';
-	/* 2 */ printf("%d\n", ft_strlcat(dest, src, 1) == 10 && !strcmp(dest, "B"));
-	/* 2 */ printf("%s\n", dest);
-	/* 2 */ printf("%d\n", strcmp(dest, "B"));
-	/* 2 */ printf("%zu\n", ft_strlcat(dest, src, 1));
+	// char dest[30]; memset(dest, 0, 30);
+	// char * src = (char *)"AAAAAAAAA";
+	// dest[0] = 'B';
+	// /* 1 */ printf("%d\n", ft_strlcat(dest, src, 0) == strlen(src) && !strcmp(dest, "B"));
+	// dest[0] = 'B';
+	// /* 2 */ printf("%d\n", ft_strlcat(dest, src, 1) == 10 && !strcmp(dest, "B"));
+	// /* 2 */ printf("%s\n", dest);
+	// /* 2 */ printf("%d\n", strcmp(dest, "B"));
+	// /* 2 */ printf("%zu\n", ft_strlcat(dest, src, 1));
+
+	// printf("%d\n", atoi("  \x13  1"));
+	// printf("%lu\n", SIZE_MAX * SIZE_MAX);
+
+	printf("%lu\n", SIZE_MAX * 100000);
+
 
 	return (0);
 }
