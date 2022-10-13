@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:13:50 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/12 10:02:56 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 10:51:27 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);

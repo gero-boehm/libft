@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:42:37 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/11 20:20:09 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 11:14:52 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (haystack == 0 || needle == 0)
 		return ((char *) haystack);
-	length = 0;
-	while (needle[length])
-		length++;
+	if (len == 0)
+		return (0);
+	length = ft_strlen(needle);
 	if (length == 0)
 		return ((char *) haystack);
 	i = 0;

@@ -71,6 +71,8 @@ int main(void)
 	/* 1 */ printf("%d\n", ft_strlcat(dest, src, 0) == strlen(src) && !strcmp(dest, "B"));
 	dest[0] = 'B';
 	/* 2 */ printf("%d\n", ft_strlcat(dest, src, 1) == 10 && !strcmp(dest, "B"));
+	/* 2 */ printf("%s\n", dest);
+	/* 2 */ printf("%d\n", strcmp(dest, "B"));
 	/* 2 */ printf("%zu\n", ft_strlcat(dest, src, 1));
 
 	return (0);
