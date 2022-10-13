@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:13:50 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 19:01:49 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 21:03:47 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_itoa(int n);
 
 #endif

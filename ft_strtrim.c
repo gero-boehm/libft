@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:24:44 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 19:41:34 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 20:45:02 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == 0)
 		return (0);
 	if (set == 0)
-		return (s1);
-	end = ft_strlen(s1) - 1;
+		return ((char *) s1);
+	start = 0;
 	while (s1[start])
 	{
 		if (!is_in_set(s1[start], set))
 			break ;
 		start++;
 	}
+	end = ft_strlen(s1) - 1;
 	while (s1[end])
 	{
 		if (!is_in_set(s1[end], set))

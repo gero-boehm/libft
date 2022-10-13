@@ -80,7 +80,28 @@ int main(void)
 	// printf("%d\n", atoi("  \x13  1"));
 	// printf("%lu\n", SIZE_MAX * SIZE_MAX);
 
-	printf("%lu\n", SIZE_MAX * 100000);
+	// printf("%lu\n", SIZE_MAX * 100000);
+
+
+	// printf("%d\n", INT_MIN);
+	// printf("%d\n", INT_MAX);
+
+
+	printf("%s\n", ft_itoa(INT_MIN));
+	printf("%s\n", ft_itoa(INT_MAX));
+	printf("%s\n", ft_itoa(10));
+	printf("%s\n", ft_itoa(-10));
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(-0));
+
+	// char *str = ft_itoa(-10);
+
+	// for(int i = 0; i < (int) ft_strlen(str); i++)
+	// {
+	// 	print_hex(str[i]);
+	// 	printf(" ");
+	// }
+	// printf("\n");
 
 
 	return (0);

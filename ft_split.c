@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:43:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 20:09:13 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/13 20:44:21 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static int	get_count(char const *s, char c)
 	char const	*cursor;
 
 	count = 1;
+	cursor = s;
 	while (cursor)
 	{
 		cursor = ft_strchr(cursor, c);
@@ -37,6 +38,7 @@ char	**ft_split(char const *s, char c)
 	int			count;
 	char const	*cursor;
 	char const	*last;
+	char		**array;
 
 	if (s == 0)
 		return (0);
