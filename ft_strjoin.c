@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 20:14:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 19:43:59 by gbohm            ###   ########.fr       */
+/*   Created: 2022/10/13 19:16:02 by gbohm             #+#    #+#             */
+/*   Updated: 2022/10/13 19:24:22 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	len;
+	size_t	length_s1;
+	size_t	length_s2;
+	char	*str;
 
-	if (s == 0)
+	if (s1 == 0 || s2 == 0)
 		return (0);
-	len = ft_strlen(s);
-	i = 0;
-	while (i < len + 1)
-	{
-		if (s[i] == (char) c)
-			return ((char *)(s + i));
-		i++;
-	}
-	return (0);
+	length_s1 = ft_strlen(s1);
+	length_s2 = ft_strlen(s2);
+	str = malloc(length_s1 + length_s2 + 1);
+	if (str == 0)
+		return (0);
+	ft_strlcpy(str, s1, length_s1);
+	ft_strlcpy(str + length_s1, s2, length_s2);
+	str[length_s1 + length_s2] = 0;
+	return (str);
 }
