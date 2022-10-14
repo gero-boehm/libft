@@ -11,6 +11,9 @@ $(OBJ_DIR)/%.o: %.c $(DEPS)
 all: $(OBJS)
 	ar -crs libft.a $^
 
+bonus: $(OBJS)
+	ar -crs libft.a $^
+
 test: $(OBJS)
 	$(CC) -o $@ $^ && ./test
 

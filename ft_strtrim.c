@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:24:44 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 09:36:11 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/14 17:44:44 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,6 @@ static int	is_in_set(char c, char const *set)
 		set++;
 	}
 	return (0);
-}
-
-static char	*empty(void)
-{
-	char	*empty;
-
-	empty = malloc(1);
-	if (empty == 0)
-		return (0);
-	*empty = 0;
-	return (empty);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -59,6 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	}
 	if (end - start + 1 < 1)
-		return (empty());
+		return (ft_calloc(1, 1));
 	return (ft_substr(s1, start, end - start + 1));
 }
