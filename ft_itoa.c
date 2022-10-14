@@ -6,13 +6,13 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 20:19:23 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 21:15:42 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/14 12:55:43 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <limits.h>
+#include "libft.h"
 
 static int	get_count(int n)
 {
@@ -41,9 +41,9 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == INT_MIN)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	count = get_count(n);
 	str = malloc(count);
 	if (str == 0)
