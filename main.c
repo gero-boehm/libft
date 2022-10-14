@@ -87,12 +87,12 @@ int main(void)
 	// printf("%d\n", INT_MAX);
 
 
-	printf("%s\n", ft_itoa(INT_MIN));
-	printf("%s\n", ft_itoa(INT_MAX));
-	printf("%s\n", ft_itoa(10));
-	printf("%s\n", ft_itoa(-10));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-0));
+	// printf("%s\n", ft_itoa(INT_MIN));
+	// printf("%s\n", ft_itoa(INT_MAX));
+	// printf("%s\n", ft_itoa(10));
+	// printf("%s\n", ft_itoa(-10));
+	// printf("%s\n", ft_itoa(0));
+	// printf("%s\n", ft_itoa(-0));
 
 	// char *str = ft_itoa(-10);
 
@@ -102,6 +102,42 @@ int main(void)
 	// 	printf(" ");
 	// }
 	// printf("\n");
+
+	// char *s = ft_substr("tripouille", 1, 1);
+	// printf("%s\n", s);
+
+	// char * s = ft_strjoin("tripouille", "42");
+	// printf("%s\n", s);
+
+	// char * s = ft_strtrim("   xxxtripouille", " x");
+	// printf("%s\n", s);
+
+	// char * s = ft_strtrim("   xxx   xxx", " x");
+	// printf("%s\n", s);
+
+	// char s = '3';
+	// char c = '5';
+	// char d = '2';
+	// print_hex(c);
+	// printf(" ");
+	// print_hex(*(&c + 1));
+	// printf(" ");
+	// (void) s;
+	// (void) d;
+
+	char * * tab = ft_split("  tripouille  42  ", ' ');
+
+	while (*tab)
+	{
+		printf("%s\n", *tab);
+		tab++;
+	}
+
+	// printf("%s\n", tab[0]);
+	// printf("%s\n", tab[1]);
+	// printf("%s\n", tab[2]);
+
+	(void) tab;
 
 
 	return (0);
