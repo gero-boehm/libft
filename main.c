@@ -125,20 +125,32 @@ int main(void)
 	// (void) s;
 	// (void) d;
 
-	char * * tab = ft_split("  tripouille  42  ", ' ');
+	// char * * tab = ft_split("  tripouille  42  ", ' ');
 
-	while (*tab)
-	{
-		printf("%s\n", *tab);
-		tab++;
-	}
+	// while (*tab)
+	// {
+	// 	printf("%s\n", *tab);
+	// 	tab++;
+	// }
 
 	// printf("%s\n", tab[0]);
 	// printf("%s\n", tab[1]);
 	// printf("%s\n", tab[2]);
 
-	(void) tab;
+	// (void) tab;
 
+	// int n = ft_atoi("546:5");
+	// printf("%d\n", n);
+
+	// int n = ft_memcmp("t\200", "t\0", 2);
+	// // int n = ft_memcmp("testss", "test", 5);
+	// printf("%d\n", n);
+
+	char dest[] = "rrrrrrrrrrrrrrr";
+	int n = ft_strlcat(dest, "lorem ipsum dolor sit amet", 5);
+
+	printf("%d\n", n);
+	printf("%s\n", dest);
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:39:04 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/13 21:05:39 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/15 10:08:23 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_atoi(const char *str)
 		return (0);
 	while (ft_isspace(*str))
 		str++;
+	sign = 1;
 	if (*str == '-')
 	{
 		sign = -1;
