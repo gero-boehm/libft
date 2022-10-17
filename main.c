@@ -112,7 +112,10 @@ int main(void)
 	// char * s = ft_strtrim("   xxxtripouille", " x");
 	// printf("%s\n", s);
 
-	// char * s = ft_strtrim("   xxx   xxx", " x");
+	// s = ft_strtrim("   xxx   xxx", " x");
+	// printf("%s\n", s);
+
+	// s = ft_strtrim("          ", " ");
 	// printf("%s\n", s);
 
 	// char s = '3';

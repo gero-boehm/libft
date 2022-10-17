@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 18:50:18 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 09:04:41 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/17 20:24:32 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		difference;
 	char	*sub;
 
-	if (s == 0)
-		return (0);
+	if (s == NULL)
+		return (NULL);
 	length = ft_strlen(s);
 	if (start > length)
 		return (empty());
@@ -41,8 +41,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (difference > 0)
 		len -= difference;
 	sub = malloc(len + 1);
-	if (sub == 0)
-		return (0);
+	if (sub == NULL)
+		return (NULL);
 	sub[len] = 0;
 	while (len > 0)
 	{

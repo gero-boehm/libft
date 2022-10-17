@@ -6,48 +6,25 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:24:44 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 17:44:44 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/17 20:44:01 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	is_in_set(char c, char const *set)
-{
-	while (*set)
-	{
-		if (*set == c)
-			return (1);
-		set++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int	start;
 	int	end;
 
-	if (s1 == 0)
-		return (0);
-	if (set == 0)
-		return ((char *) s1);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
-	while (s1[start])
-	{
-		if (!is_in_set(s1[start], set))
-			break ;
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	}
 	end = ft_strlen(s1) - 1;
-	while (s1[end])
-	{
-		if (!is_in_set(s1[end], set))
-			break ;
+	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	}
-	if (end - start + 1 < 1)
-		return (ft_calloc(1, 1));
 	return (ft_substr(s1, start, end - start + 1));
 }
