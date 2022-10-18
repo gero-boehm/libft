@@ -6,20 +6,38 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 08:40:20 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/17 21:14:33 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 10:21:35 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <limits.h>
 #include "libft.h"
+
+static void	putnum(int n, int fd)
+{
+	char	c;
+
+	c = (char) n + '0';
+	write(fd, &c, 1);
+}
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-
-	str = ft_itoa(n);
-	if (str == 0)
+	if (n == INT_MIN)
+	{
+		write(fd, "-2147483648", 11);
 		return ;
-	ft_putstr_fd(str, fd);
-	free(str);
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n < 10)
+	{
+		putnum(n, fd);
+		return ;
+	}
+	ft_putnbr_fd(n / 10, fd);
+	ft_putnbr_fd(n % 10, fd);
 }

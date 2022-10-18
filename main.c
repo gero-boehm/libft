@@ -149,11 +149,14 @@ int main(void)
 	// // int n = ft_memcmp("testss", "test", 5);
 	// printf("%d\n", n);
 
-	char dest[] = "rrrrrrrrrrrrrrr";
-	int n = ft_strlcat(dest, "lorem ipsum dolor sit amet", 5);
+	// char dest[] = "rrrrrrrrrrrrrrr";
+	// int n = ft_strlcat(dest, "lorem ipsum dolor sit amet", 5);
 
-	printf("%d\n", n);
-	printf("%s\n", dest);
+	// printf("%d\n", n);
+	// printf("%s\n", dest);
+
+
+	ft_putnbr_fd(-1590548, 1);
 
 	return (0);
 }
