@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:24:56 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 17:34:12 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:55:51 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*node;
 	t_list	*next;
 
+	if (lst == 0 || del == 0)
+		return ;
 	node = *lst;
 	while (node)
 	{

@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:39:04 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/15 10:08:23 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 14:33:30 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	ft_atoi(const char *str)
 	int	sign;
 	int	result;
 
-	if (str == 0)
-		return (0);
 	while (ft_isspace(*str))
 		str++;
 	sign = 1;

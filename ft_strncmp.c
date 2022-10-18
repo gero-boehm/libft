@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:08:07 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/17 19:58:19 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 16:31:01 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (s1 == 0 || s2 == 0)
-		return (-1);
-	return (ft_memcmp((const void *) s1, (const void *) s2, n));
+	size_t				i;
+	const unsigned char	*a;
+	const unsigned char	*b;
+
+	a = (const unsigned char *) s1;
+	b = (const unsigned char *) s2;
+	i = 0;
+	while (i < n)
+	{
+		if (!a[i] || !b[i] || a[i] != b[i])
+			return (a[i] - b[i]);
+		i++;
+	}
+	return (0);
 }

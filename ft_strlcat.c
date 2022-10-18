@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 08:45:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/17 21:13:28 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:42:14 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	srclen;
 	size_t	i;
 
-	if (dst == NULL || src == NULL)
-		return (0);
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);

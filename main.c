@@ -156,7 +156,39 @@ int main(void)
 	// printf("%s\n", dest);
 
 
-	ft_putnbr_fd(-1590548, 1);
+	// ft_putnbr_fd(-1590548, 1);
+
+	// int n = ft_atoi("-2147483648");
+	// int n = ft_atoi("9223372036854775807");
+	// int n2 = atoi("9223372036854775807");
+	// printf("%d\n", n);
+	// printf("%d\n", n2);
+
+	// min -9223372036854775808
+	// max  9223372036854775807
+
+	// int n = ft_atoi("-9223372036854775810");
+	// int n2 = atoi("-9223372036854775810");
+	// printf("%d\n", n);
+	// printf("%d\n", n2);
+
+	// printf("%ld\n", LONG_MAX);
+
+	// char	*big = "abcdef";
+	// char	*little = "abcdefghijklmnop";
+	// size_t	size = 6;
+
+	// int		i1 = strncmp(big, little, size);
+	// int		i2 = ft_strncmp(big, little, size);
+
+	// printf("%d %d\n", i1, i2);
+
+
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+
+	char *p = ft_strnstr(haystack, needle, 0);
+	printf("%p\n", p);
 
 	return (0);
 }

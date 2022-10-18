@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:26:32 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/12 10:27:05 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:03:41 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	direction;
 	size_t	index;
 
-	if (dst == 0 || src == 0 || len == 0)
+	if (len == 0)
 		return (dst);
 	if (src == dst)
 		return (dst);

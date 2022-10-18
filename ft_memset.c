@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:09:53 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/12 11:15:18 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:02:43 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
-	if (b == 0)
-		return (b);
 	i = 0;
 	while (i < len)
 	{
