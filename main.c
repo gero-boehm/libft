@@ -184,11 +184,11 @@ int main(void)
 	// printf("%d %d\n", i1, i2);
 
 
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
+	// char haystack[30] = "aaabcabcd";
+	// char needle[10] = "aabc";
 
-	char *p = ft_strnstr(haystack, needle, 0);
-	printf("%p\n", p);
+	// char *p = ft_strnstr(haystack, needle, 0);
+	// printf("%p\n", p);
 
-	return (0);
+	// return (0);
 }
