@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 20:19:23 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 12:55:43 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:20:02 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char	*ft_itoa(int n)
 		return (ft_strdup("0"));
 	count = get_count(n);
 	str = malloc(count);
-	if (str == 0)
-		return (0);
+	if (str == NULL)
+		return (NULL);
 	str[--count] = 0;
 	if (n < 0)
 	{

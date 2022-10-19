@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:16:02 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 09:10:27 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:27:26 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	length_s2;
 	char	*str;
 
-	if (s1 == 0 || s2 == 0)
-		return (0);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	length_s1 = ft_strlen(s1);
 	length_s2 = ft_strlen(s2);
 	str = malloc(length_s1 + length_s2 + 1);
-	if (str == 0)
-		return (0);
+	if (str == NULL)
+		return (NULL);
 	ft_strlcpy(str, s1, length_s1 + 1);
 	ft_strlcpy(str + length_s1, s2, length_s2 + 1);
 	str[length_s1 + length_s2] = 0;

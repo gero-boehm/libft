@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:14:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/18 13:07:23 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:27:04 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)(s + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

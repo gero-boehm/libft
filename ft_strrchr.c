@@ -6,9 +6,11 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:36:17 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/18 13:08:14 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:30:07 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -23,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *) s + i);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }

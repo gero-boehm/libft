@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 09:08:39 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 13:13:53 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 15:28:08 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_calloc(size_t count, size_t size)
 
 	total = count * size;
 	if (count && total / count != size)
-		return (0);
+		return (NULL);
 	mem = malloc(total);
-	if (mem == 0)
-		return (0);
+	if (mem == NULL)
+		return (NULL);
 	ft_bzero(mem, total);
 	return ((void *) mem);
 }

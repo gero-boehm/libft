@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:12:18 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/18 13:04:05 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:25:03 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)(str + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

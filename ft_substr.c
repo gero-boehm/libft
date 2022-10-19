@@ -6,25 +6,12 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 18:50:18 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/17 20:24:32 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:29:07 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-#include <stdio.h>
-
-static char	*empty(void)
-{
-	char	*empty;
-
-	empty = malloc(1);
-	if (empty == 0)
-		return (0);
-	*empty = 0;
-	return (empty);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -36,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	length = ft_strlen(s);
 	if (start > length)
-		return (empty());
+		return (ft_calloc(1, 1));
 	difference = (int)(start + len) - (int) length;
 	if (difference > 0)
 		len -= difference;

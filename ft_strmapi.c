@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 08:22:12 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 08:30:25 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/19 16:27:59 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	length;
 	char	*str;
 
-	if (s == 0)
-		return (0);
+	if (s == NULL)
+		return (NULL);
 	length = ft_strlen(s);
 	str = malloc(length + 1);
-	if (str == 0)
-		return (0);
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (i < length)
 	{
