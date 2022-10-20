@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:43:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/19 16:26:54 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/20 16:17:33 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static char const	*trim(char const *s, char c)
 
 static char	**free_all(char **array)
 {
+	if (array == NULL)
+		return (NULL);
 	while (*array)
 	{
 		free(*array);
@@ -80,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		word = ft_substr(start, 0, s - start);
-		if (word == 0)
+		if (word == NULL)
 			return (free_all(array));
 		array[i++] = word;
 	}
