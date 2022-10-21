@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:43:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/20 16:17:33 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/10/21 10:13:15 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,15 @@ static char const	*trim(char const *s, char c)
 
 static char	**free_all(char **array)
 {
+	char	**cursor;
+
 	if (array == NULL)
 		return (NULL);
-	while (*array)
+	cursor = array;
+	while (*cursor)
 	{
-		free(*array);
-		array++;
+		free(*cursor);
+		cursor++;
 	}
 	free(array);
 	return (NULL);

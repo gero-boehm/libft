@@ -190,5 +190,10 @@ int main(void)
 	// char *p = ft_strnstr(haystack, needle, 0);
 	// printf("%p\n", p);
 
-	// return (0);
+
+	// a 1234567890123456789012345678901234567890d
+	char **split = ft_split("a 1234567890123456789012345678901234567890d", ' ');
+	while(*split)
+		printf("%s\n", *split++);
+	return (0);
 }
