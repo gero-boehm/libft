@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:43:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/21 10:13:15 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/11/03 14:23:01 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	**free_all(char **array)
 	if (array == NULL)
 		return (NULL);
 	cursor = array;
-	while (*cursor)
+	while (*cursor != NULL)
 	{
 		free(*cursor);
 		cursor++;

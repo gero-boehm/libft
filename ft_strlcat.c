@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 08:45:00 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/19 16:34:29 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/11/09 17:00:02 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (srclen);
 	dstlen = ft_strlen(dst);
+	if (dstlen > dstsize)
+		return (srclen + dstsize);
 	i = 0;
 	while (src[i] && dstlen + i < dstsize - 1)
 	{
 		dst[dstlen + i] = src[i];
 		i++;
 	}
-	if (dstlen + i < dstsize)
-		dst[dstlen + i] = 0;
-	if (dstlen > dstsize)
-		return (srclen + dstsize);
+	dst[dstlen + i] = 0;
 	return (dstlen + srclen);
 }
