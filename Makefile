@@ -5,19 +5,17 @@ MANDATORY_SRC=ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isas
 BONUS_SRC=ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 MANDATORY_OBJ=$(MANDATORY_SRC:.c=.o)
 BONUS_OBJ=$(BONUS_SRC:.c=.o)
-INCLUDES=libft.h
+
+all: $(NAME)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(NAME): $(MANDATORY_OBJ) $(INCLUDES)
+$(NAME): $(MANDATORY_OBJ)
 	ar -crs $(NAME) $^
 
-bonus: $(MANDATORY_OBJ) $(BONUS_OBJ) $(INCLUDES)
+bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
 	ar -crs $(NAME) $^
-
-test: $(MANDATORY_OBJ) $(BONUS_OBJ) main.o
-	$(CC) -o $@ $^ && ./test
 
 clean:
 	rm -f *.o
@@ -27,7 +25,17 @@ fclean: clean
 
 re: fclean all
 
-all: $(NAME)
+compile: $(MANDATORY_OBJ) $(BONUS_OBJ) main.o
+	$(CC) -o $@ $^
+
+test: compile
+	./a.out
+
+tclean: clean
+	rm -f main.o
+
+tfclean: fclean
+	rm -f a.out
 
 .PHONY:
-	all bonus clean fclean re
+	all bonus clean fclean re compile test tclean tfclean
