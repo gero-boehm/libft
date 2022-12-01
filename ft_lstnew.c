@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:24:56 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/19 16:24:14 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/12/01 18:15:33 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ t_list	*ft_lstnew(void *content)
 	if (node == NULL)
 		return (NULL);
 	node->content = content;
-	node->next = 0;
+	node->next = NULL;
 	return (node);
 }
