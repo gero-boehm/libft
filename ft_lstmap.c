@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:24:56 by gbohm             #+#    #+#             */
-/*   Updated: 2022/12/01 18:15:27 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/12/02 11:41:51 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
 	mapped = NULL;
-	while (lst)
+	while (lst != NULL)
 	{
 		result = f(lst->content);
 		node = ft_lstnew(result);

@@ -26,7 +26,7 @@ fclean: clean
 re: fclean all
 
 compile: $(MANDATORY_OBJ) $(BONUS_OBJ) main.o
-	$(CC) -o $@ $^
+	$(CC) $^
 
 test: compile
 	./a.out

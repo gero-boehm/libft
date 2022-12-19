@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:24:56 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/19 16:23:42 by gbohm            ###   ########.fr       */
+/*   Updated: 2022/12/02 11:41:31 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst == NULL)
 		return (NULL);
-	while (1)
-	{
-		if (!lst->next)
-			return (lst);
+	while (lst->next != NULL)
 		lst = lst->next;
-	}
+	return (lst);
 }
