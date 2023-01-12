@@ -6,7 +6,7 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:13:50 by gbohm             #+#    #+#             */
-/*   Updated: 2022/10/14 17:34:32 by gbohm            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:21:17 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+int		ft_malloc2(size_t count, void **p);
+int		ft_calloc2(size_t count, size_t size, void **p);
+int		ft_extstr2(char **str, size_t amount);
 
 #endif
