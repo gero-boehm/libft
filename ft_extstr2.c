@@ -6,10 +6,11 @@
 /*   By: gbohm <gbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:51:32 by gbohm             #+#    #+#             */
-/*   Updated: 2023/01/12 16:59:14 by gbohm            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:29:19 by gbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 int	ft_extstr2(char **str, size_t amount)
